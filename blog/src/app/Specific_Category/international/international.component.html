@@ -1,0 +1,19 @@
+
+<div class="row list-border-wrapper mt-40 mb-26 category-4-column">
+
+    <div class="col-md-4 mb-4  mb-4 " *ngFor="let b of category">
+       
+        
+
+        <a [routerLink]="'/blogDetails/'+b.blog_id">
+            <div class="card image-container "  style="width: 18rem; height: 20rem;">
+                <img [src]="'../'+b.image" class="card-img-top img-fluid" alt="local file path not working. Please Retrieve image path from assets folder">
+                <div class="card-body">
+                    <h5 class="card-title text-wrap text-truncate ">{{ b.title }}</h5>
+                    <p class="card-text text-truncate "> <strong> {{ b.description }} </strong></p>
+                    <p class="card-text text-truncate "> <strong> {{ b.category }} </strong></p>
+                </div>
+            </div>
+        </a>
+    </div>
+

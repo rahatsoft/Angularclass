@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "hospital",
+			"path": "../../../../../hospital"
+		},
+		{
+			"name": "HMS",
+			"path": "../../../.."
+		}
+	],
+	"settings": {}
+}

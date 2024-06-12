@@ -1,0 +1,53 @@
+<!-- -------------new--- -->
+
+<div class="form-container">
+  <!-- <h1>Add login information:</h1> -->
+
+  <div class="row">
+    <div class="col-2"></div>
+
+    <div class="col-10">
+      <form (ngSubmit)="insert()">
+        <div class="mb-3">
+          <label for="id" class="form-label"> Id</label>
+          <input type="text" placeholder="Enter your Id" class="form-control" id="id" name="id" [(ngModel)]="id" />
+        </div>
+
+        <div class="mb-3">
+          <label for="name" class="form-label"> Name</label>
+          <input type="text" placeholder="Enter your Name " class="form-control" id="name" name="name"
+            [(ngModel)]="name" />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label"> Email</label>
+          <input type="text" placeholder="Enter your email " class="form-control" id="email" name="email"
+            [(ngModel)]="email" />
+        </div>
+
+        <div class="mb-3">
+          <label for="Password" class="form-label">Password</label>
+          <input type="password" placeholder="Enter your Password " class="form-control" id="Password" name="Password"
+            [(ngModel)]="password" />
+        </div>
+
+        <div class="input-group">
+          <label><strong>Role:</strong></label>
+          <select id="role" name="role" [(ngModel)]="role" style="width: 200px;">
+
+            <option value="Admin" selected="Admin">Admin</option>
+            <option value="Visitor">Visitor</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div>
+  <input type="file" [(ngModel)]="fileName"  class="form-control" id="fileName" name="fileName "  (change)="onFileSelected($event)">
+<!-- <input type="text" [ngModel]="fileName" readonly> -->
+</div>
+

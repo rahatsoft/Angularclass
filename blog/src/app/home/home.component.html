@@ -1,0 +1,145 @@
+<div class="container">
+
+
+    <div class="card mb-3" style="max-width: 1200px;">
+        <div class="row g-0" *ngFor="let b of head ">
+            <div class="col-md-8 card image-container " >
+                <a [routerLink]="'/blogDetails/'+b.blog_id">
+                    <img [src]="'../'+b.image" class="img-fluid rounded-start" alt="..."
+                        style="width: 740px; height: 300px;">
+                </a>
+
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card-body">
+                    <a [routerLink]="'/blogDetails/'+b.blog_id">
+                        <div class="card image-container img-fluid ">
+                            <!-- <img [src]="'../'+b.image" class="card-img-top img-fluid" alt="local file path not working. Please Retrieve image path from assets folder"> -->
+                            <div class="card-body">
+                                <h5 class="card-title text-wrap text-truncate ">{{ b.title }}</h5>
+                                <p class="card-text text-truncate "> {{ b.description }} </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+
+
+    <!-- <div class="card text-bg" *ngFor="let b of head ">
+        
+        <img [src]="'../'+b.image" style="width: 1200px; height: 400px;">
+        
+        <div class="card-img-overlay">
+            <a [routerLink]="'/blogDetails/'+b.blog_id">
+                <div class="card image-container img-fluid "  >
+                    <div class="card-body">
+                        <h5 class="card-title text-wrap text-truncate ">{{ b.title }}</h5>
+                        <p class="card-text text-truncate ">  {{ b.description }} </p>
+                    </div>
+                </div>
+            </a>
+
+            
+           
+        </div>
+
+
+      </div>
+    -->
+
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-7">
+            <div class="row list-border-wrapper mt-40 mb-26 category-1-column">
+                <div class="col-md-4 mb-4  mb-4 " *ngFor="let b of allBlog ">
+                    <a [routerLink]="'/blogDetails/'+b.blog_id">
+                        <div class="card image-container img-fluid ">
+                            <img [src]="'../'+b.image" class="card-img-top img-fluid"
+                                alt="local file path not working. Please Retrieve image path from assets folder">
+                            <div class="card-body">
+                                <h5 class="card-title text-wrap text-truncate ">{{ b.title }}</h5>
+                                <p class="card-text text-truncate "> {{ b.description }} </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+
+        <div class="col-1">
+            <div style="border-left:3px dotted #000000;height:800px;text-align:center;"></div>
+
+        </div>
+        <!-- rigt data ----------------------------------------->
+        <div class="col-4">
+
+            <div class="row list-border-wrapper mt-50 mb-26 category-4-column">
+                <div class="col " *ngFor="let b of allBlog">
+                    <a [routerLink]="'/blogDetails/'+b.blog_id">
+                        <div class="card image-container " style="width: 20rem; height: 7rem;">
+                            <!-- <img [src]="'../'+b.image" class="card-img-top img-fluid"
+                                alt="local file path not working. Please Retrieve image path from assets folder"> -->
+                            <div class="card-body">
+                                <h5 class="card-title text-wrap text-truncate ">{{ b.title }}</h5>
+                                <!-- <p class="card-text text-truncate "> {{ b.description }} </p> -->
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col">
+        <div class="row list-border-wrapper mt-40 mb-26 category-4-column">
+            <div class="col-md-3  md-3 md-3 md-3 " *ngFor="let b of bangladesh ">
+                <a [routerLink]="'/blogDetails/'+b.blog_id">
+                    <div class="card image-container img-fluid ">
+                        <img [src]="'../'+b.image" class="card-img-top img-fluid"
+                            alt="local file path not working. Please Retrieve image path from assets folder">
+                        <div class="card-body">
+                            <h5 class="card-title text-wrap text-truncate ">{{ b.title }}</h5>
+                            <p class="card-text text-truncate "> {{ b.description }} </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+
+<div class="">
+    <h1>Link</h1>
+    <hr>
+
+    <div class="row list-border-wrapper mt-40 mb-26 category-4-column">
+        <div class="col-md-4 mb-4  mb-4 " *ngFor="let b of allBlog">
+            <a [routerLink]="'/blogDetails/'+b.blog_id">
+                <div class="card-body">
+                    <h5 class="card-title text-wrap text-truncate ">{{ b.title }}</h5>
+                    <!-- <p class="card-text text-truncate ">  {{ b.description }} </p> -->
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{{bangladesh|json}}
